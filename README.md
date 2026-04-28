@@ -167,4 +167,8 @@ LIMIT 100;
 ```
 
 ---
-**Autor:** [Carlos Orellana Palma](https://github.com/carlosorellanapalma)
+
+## Author
+
+**Carlos Orellana Palma** - [carlos.orellana@biocatch.com](mailto:carlos.orellana@biocatch.com)
+With ❤️ from Mobile Solutions Team @BioCatch 😎
