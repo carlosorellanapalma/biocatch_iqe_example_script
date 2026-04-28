@@ -1,5 +1,7 @@
 # Snowflake Query Exporter
 
+**Versión:** 1.1.0
+
 Este script permite ejecutar consultas SQL en Snowflake reemplazando tokens de fecha y exportando los resultados a diferentes formatos (CSV, Excel, TXT).
 
 ## Requisitos
@@ -163,3 +165,6 @@ FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
 WHERE O_ORDERDATE BETWEEN '{data_from}' AND '{date_end}'
 LIMIT 100;
 ```
+
+---
+**Autor:** [Carlos Orellana Palma](https://github.com/carlosorellanapalma)
