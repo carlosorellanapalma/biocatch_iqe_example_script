@@ -8,29 +8,97 @@ Este script permite ejecutar consultas SQL en Snowflake reemplazando tokens de f
 - Una cuenta activa de **Snowflake**.
 - Dependencias de Python (ver sección de instalación).
 
-## Instalación
+## Instalación y Configuración
 
-1. **Clonar o descargar el repositorio.**
+A continuación se detallan los pasos para configurar el proyecto en diferentes sistemas operativos.
 
-2. **Crear un entorno virtual (recomendado):**
+### Requisitos Previos
+- **Python 3.10 o superior** instalado.
+- **Git** (opcional, para clonar el repositorio).
+
+---
+
+###  macOS / 🐧 Linux
+
+1. **Clonar el repositorio:**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   git clone https://github.com/biocatchltd/biocatch_iqe_example_script.git
+   cd biocatch_iqe_example_script
+   ```
+
+2. **Crear y activar el entorno virtual:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
 3. **Instalar dependencias:**
    ```bash
+   pip install --upgrade pip
    pip install -r requirements.txt
    ```
 
-## Configuración
+4. **Configurar variables de entorno (Temporal):**
+   ```bash
+   export SNOWFLAKE_USER="tu_usuario"
+   export SNOWFLAKE_PASSWORD="tu_contraseña"
+   # ... y así con el resto
+   ```
 
-El script utiliza variables de entorno para la conexión a Snowflake. Puedes configurar estas variables creando un archivo `.env` en la raíz del proyecto.
+---
+
+### ⊞ Windows
+
+#### Usando PowerShell (Recomendado)
+
+1. **Clonar el repositorio:**
+   ```powershell
+   git clone https://github.com/biocatchltd/biocatch_iqe_example_script.git
+   cd biocatch_iqe_example_script
+   ```
+
+2. **Crear y activar el entorno virtual:**
+   ```powershell
+   python -m venv venv
+   .\venv\Scripts\Activate.ps1
+   ```
+   *Nota: Si recibes un error de ejecución de scripts, ejecuta `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`.*
+
+3. **Instalar dependencias:**
+   ```powershell
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+4. **Configurar variables de entorno (Temporal):**
+   ```powershell
+   $env:SNOWFLAKE_USER="tu_usuario"
+   $env:SNOWFLAKE_PASSWORD="tu_contraseña"
+   ```
+
+#### Usando Símbolo del Sistema (CMD)
+
+1. **Crear y activar el entorno virtual:**
+   ```cmd
+   python -m venv venv
+   venv\Scripts\activate.bat
+   ```
+
+2. **Configurar variables de entorno (Temporal):**
+   ```cmd
+   set SNOWFLAKE_USER=tu_usuario
+   set SNOWFLAKE_PASSWORD=tu_contraseña
+   ```
+
+---
+
+## Configuración Permanente (.env)
+
+Independientemente del sistema operativo, puedes usar un archivo `.env` para no tener que configurar las variables en cada sesión.
 
 1. Copia el archivo de ejemplo:
-   ```bash
-   cp .env.example .env
-   ```
+   - **macOS / Linux / PowerShell:** `cp .env.example .env`
+   - **Windows (CMD):** `copy .env.example .env`
 
 2. Edita el archivo `.env` con tus credenciales:
 
